@@ -33,6 +33,7 @@ public class CRUD extends javax.swing.JFrame {
         jread = new javax.swing.JButton();
         jdelete = new javax.swing.JButton();
         jlogout = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -49,27 +50,27 @@ public class CRUD extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 153, 153));
         jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 153, 153));
+        jLabel1.setForeground(new java.awt.Color(255, 102, 102));
         jLabel1.setText("USER PANEL");
 
         jcreate.setBackground(new java.awt.Color(242, 242, 242));
         jcreate.setFont(new java.awt.Font("Baskerville Old Face", 0, 14)); // NOI18N
-        jcreate.setForeground(new java.awt.Color(255, 153, 153));
+        jcreate.setForeground(new java.awt.Color(255, 102, 102));
         jcreate.setText("CREATE");
 
         jupdate.setBackground(new java.awt.Color(242, 242, 242));
         jupdate.setFont(new java.awt.Font("Baskerville Old Face", 0, 14)); // NOI18N
-        jupdate.setForeground(new java.awt.Color(255, 153, 153));
+        jupdate.setForeground(new java.awt.Color(255, 102, 102));
         jupdate.setText("UPDATE");
 
         jread.setBackground(new java.awt.Color(242, 242, 242));
         jread.setFont(new java.awt.Font("Baskerville Old Face", 0, 14)); // NOI18N
-        jread.setForeground(new java.awt.Color(255, 153, 153));
+        jread.setForeground(new java.awt.Color(255, 102, 102));
         jread.setText("READ");
 
         jdelete.setBackground(new java.awt.Color(242, 242, 242));
         jdelete.setFont(new java.awt.Font("Baskerville Old Face", 0, 14)); // NOI18N
-        jdelete.setForeground(new java.awt.Color(255, 153, 153));
+        jdelete.setForeground(new java.awt.Color(255, 102, 102));
         jdelete.setText("DELETE");
         jdelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +79,7 @@ public class CRUD extends javax.swing.JFrame {
         });
 
         jlogout.setFont(new java.awt.Font("Baskerville Old Face", 0, 12)); // NOI18N
-        jlogout.setForeground(new java.awt.Color(255, 153, 153));
+        jlogout.setForeground(new java.awt.Color(255, 102, 102));
         jlogout.setText("LOG OUT");
         jlogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,45 +87,58 @@ public class CRUD extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 17, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(95, 95, 95)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jupdate)
-                    .addComponent(jcreate))
+                .addGap(68, 68, 68)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jcreate)
+                    .addComponent(jupdate))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jlogout)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 181, Short.MAX_VALUE)
+                        .addComponent(jlogout, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(72, 72, 72)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jdelete)
                             .addComponent(jread, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 86, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(124, 124, 124)
                 .addComponent(jLabel1)
-                .addGap(137, 137, 137))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addGap(39, 39, 39)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jread)
-                    .addComponent(jcreate))
-                .addGap(69, 69, 69)
+                    .addComponent(jcreate)
+                    .addComponent(jread))
+                .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jupdate)
                     .addComponent(jdelete))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addComponent(jlogout)
                 .addGap(17, 17, 17))
         );
@@ -178,6 +192,7 @@ public class CRUD extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jcreate;
     private javax.swing.JButton jdelete;
     private javax.swing.JButton jlogout;
