@@ -15,4 +15,16 @@ public class connectionDB {
         Connection conn = null;
         
      try {
+                    conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            System.out.println("Database is Connected Successfully!");
+            
+        } catch (SQLException e) {
+            System.out.println("Connection Failed!");
+            e.printStackTrace();   
+        }
+     
+     return conn;
+     
+    }
 }
+     
