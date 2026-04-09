@@ -63,6 +63,11 @@ public class login extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Baskerville Old Face", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 102, 102));
         jButton1.setText("LOGIN");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Baskerville Old Face", 0, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 102, 102));
@@ -183,6 +188,30 @@ public class login extends javax.swing.JFrame {
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String email = jTextField1.getText().trim();
+    String password = String.valueOf(jPasswordField1.getPassword()).trim();
+
+    // Check if empty
+    if (email.isEmpty() || password.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Please enter email and password");
+        return;
+    }
+
+    // Sample login (you can change later to database)
+    if (email.equals("admin@gmail.com") && password.equals("1234")) {
+        JOptionPane.showMessageDialog(this, "Login Successful!");
+
+        // OPTIONAL: clear fields after login
+        jTextField1.setText("");
+        jPasswordField1.setText("");
+
+    } else {
+        JOptionPane.showMessageDialog(this, "Invalid Email or Password");
+    }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
