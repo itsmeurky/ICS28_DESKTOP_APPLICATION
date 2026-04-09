@@ -1,6 +1,10 @@
 
 package ics28a_midrequirement;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+
 
 public class login extends javax.swing.JFrame {
 
@@ -152,6 +156,28 @@ public class login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
+        String name = jTextField1.getText();
+        String email = jTextField2.getText();
+        String password = new String(jPasswordField1.getPassword());
+
+    try {
+        Connection conn = ConnectionDB.getConnection();
+    
+        String sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
+        PreparedStatement pst = conn.prepareStatement(sql);
+    
+        pst.setString(1, name);
+        pst.setString(2, email);
+        pst.setString(3, password);
+    
+        pst.executeUpdate();
+    
+        JOptionPane.showMessageDialog(null, "Account Created Successfully!");
+    
+    } catch (Exception e) {
+    e.printStackTrace();
+    }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
